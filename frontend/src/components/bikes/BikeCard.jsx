@@ -73,7 +73,7 @@ function BikeCard({ bike }) {
             onClick={handleAddToCart}
             aria-label={`Add ${bike.name} to Cart`}
           >
-            {justAdded ? 'Added ✓' : isInCart(bike.id) ? 'Add More +' : 'Add to Cart 🛒'}
+            {justAdded ? 'Added' : 'Add to Cart'}
           </button>
           <Link
             to={detailsUrl}

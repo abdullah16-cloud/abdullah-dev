@@ -249,7 +249,7 @@ function BikeDetailPage() {
                 className="btn btn-secondary detail-book-btn"
                 onClick={handleDirectBooking}
               >
-                Book Dealership Reservation (COD)
+                Proceed to Dealership Booking
               </button>
             </div>
 

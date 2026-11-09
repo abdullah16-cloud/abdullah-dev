@@ -433,7 +433,18 @@ function CartDrawer() {
           )}
 
           {drawerStep === 'cart' && cartItems && cartItems.length > 0 && (
-            <div className="drawer-items-list">
+            <div className="drawer-cart-view-wrap">
+              <div className="drawer-top-action-bar" style={{ marginBottom: '1rem' }}>
+                <button
+                  type="button"
+                  className="btn btn-primary drawer-checkout-btn"
+                  onClick={handleOpenCheckout}
+                >
+                  Proceed to Dealership Booking
+                </button>
+              </div>
+
+              <div className="drawer-items-list">
               {cartItems.map((item) => {
                 const priceFormatted = item.pricePkr
                   ? formatPkr(item.pricePkr)
@@ -506,6 +517,7 @@ function CartDrawer() {
                 );
               })}
             </div>
+            </div>
           )}
         </div>
 
@@ -533,7 +545,7 @@ function CartDrawer() {
               className="btn btn-primary drawer-checkout-btn"
               onClick={handleOpenCheckout}
             >
-              Proceed to Dealership Booking &rarr;
+              Proceed to Dealership Booking
             </button>
 
             <div className="drawer-footer-actions">

@@ -19,7 +19,7 @@ function BikeCard({ bike }) {
       ? `${bike.engineCc} cc`
       : 'Engine: not verified';
 
-  const detailsUrl = '/bikes';
+  const detailsUrl = `/bikes/${bike.slug || bike.id}`;
   const imageUrl =
     Array.isArray(bike.images) && bike.images.length > 0 && typeof bike.images[0] === 'string'
       ? bike.images[0]
@@ -35,7 +35,7 @@ function BikeCard({ bike }) {
 
   return (
     <article className="bike-card" aria-labelledby={`bike-title-${bike.id}`}>
-      <div className="bike-card-image-wrap">
+      <Link to={detailsUrl} className="bike-card-image-wrap" tabIndex={-1}>
         {bike.isDemoData && <span className="bike-demo-badge">Demo Data</span>}
         <img
           src={imageUrl}
@@ -52,12 +52,14 @@ function BikeCard({ bike }) {
         <div className="bike-card-img-fallback" style={{ display: 'none', width: '100%', height: '100%' }}>
           <ImagePlaceholder label={bike.name} subText={bike.category} aspectRatio="16 / 10" />
         </div>
-      </div>
+      </Link>
 
       <div className="bike-card-body">
         <span className="bike-card-category">{bike.category}</span>
         <h3 id={`bike-title-${bike.id}`} className="bike-card-title">
-          {bike.name}
+          <Link to={detailsUrl} style={{ color: 'inherit', textDecoration: 'none' }}>
+            {bike.name}
+          </Link>
         </h3>
         <p className="bike-card-spec">{engineText}</p>
 

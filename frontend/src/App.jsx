@@ -6,6 +6,7 @@ import { AuthProvider } from './context/AuthContext';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import BikesPage from './pages/BikesPage';
+import BikeDetailPage from './pages/BikeDetailPage';
 import ComparePage from './pages/ComparePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -39,6 +40,7 @@ function App() {
             <Route path="/" element={<Layout />}>
               <Route index element={<HomePage />} />
               <Route path="bikes" element={<BikesPage />} />
+              <Route path="bikes/:slug" element={<BikeDetailPage />} />
               <Route path="compare" element={<ComparePage />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="contact" element={<ContactPage />} />

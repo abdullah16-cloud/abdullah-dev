@@ -1,0 +1,56 @@
+.admin-gate-wrap {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-4);
+  background-color: var(--color-bg-primary, #0c0c0e);
+}
+
+.admin-gate-card {
+  max-width: 520px;
+  width: 100%;
+  background-color: #141418;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  border-radius: var(--radius-lg, 8px);
+  padding: var(--space-8);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.admin-gate-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto var(--space-4);
+  color: var(--color-honda-red, #cc0000);
+}
+
+.admin-gate-title {
+  font-size: var(--text-2xl, 1.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: var(--space-2);
+}
+
+.admin-gate-desc {
+  font-size: var(--text-base, 1rem);
+  color: var(--color-text-secondary, #999999);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.admin-gate-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.admin-gate-loading {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary, #999999);
+  font-size: var(--text-lg, 1.125rem);
+}

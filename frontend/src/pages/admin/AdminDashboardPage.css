@@ -1,0 +1,45 @@
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.dashboard-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #16161d 0%, #101015 100%);
+  border: 1px solid #22222d;
+  border-radius: var(--radius-lg, 8px);
+  padding: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.dashboard-hero-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: var(--space-1);
+}
+
+.dashboard-hero-desc {
+  font-size: 0.9rem;
+  color: #8f8f9d;
+  max-width: 600px;
+}
+
+.dashboard-quick-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.admin-alert-banner {
+  background-color: rgba(204, 0, 0, 0.12);
+  border: 1px solid rgba(204, 0, 0, 0.4);
+  color: #ff6b6b;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md, 6px);
+  font-size: 0.9rem;
+}

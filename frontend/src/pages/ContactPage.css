@@ -1,0 +1,128 @@
+.contact-page {
+  padding: var(--space-8) 0 var(--space-16);
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--space-10);
+}
+
+.contact-tag {
+  display: inline-block;
+  color: var(--color-honda-red, #cc0000);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-2);
+}
+
+.contact-title {
+  font-size: var(--text-3xl, 2.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: var(--space-3);
+}
+
+.contact-subtitle {
+  font-size: var(--text-base, 1rem);
+  color: #a0a0ab;
+  line-height: 1.6;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.contact-form-card {
+  background-color: #141419;
+  border: 1px solid #23232c;
+  border-radius: var(--radius-lg, 8px);
+  padding: var(--space-8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: var(--space-2);
+}
+
+.contact-form-desc {
+  font-size: 0.875rem;
+  color: #8f8f9d;
+  margin-bottom: var(--space-6);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact-info-card {
+  background-color: #141419;
+  border: 1px solid #23232c;
+  border-radius: var(--radius-lg, 8px);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.info-block-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: var(--space-2);
+}
+
+.info-block-text {
+  font-size: 0.9rem;
+  color: #8f8f9d;
+  line-height: 1.6;
+}
+
+.dealership-cities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.city-pill {
+  background-color: #0d0d11;
+  border: 1px solid #23232c;
+  color: #d1d1db;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.contact-success-box {
+  background-color: rgba(76, 175, 80, 0.12);
+  border: 1px solid rgba(76, 175, 80, 0.4);
+  color: #a5d6a7;
+  padding: var(--space-6);
+  border-radius: var(--radius-md, 6px);
+  text-align: center;
+}
+
+.contact-success-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #81c784;
+  margin-bottom: var(--space-2);
+}
+
+@media (max-width: 860px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+

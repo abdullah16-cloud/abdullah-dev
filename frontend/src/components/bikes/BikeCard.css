@@ -1,0 +1,145 @@
+.bike-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+  position: relative;
+}
+
+.bike-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gray-300);
+}
+
+.bike-card-image-wrap {
+  position: relative;
+  background-color: var(--color-gray-900);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.bike-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  background-color: #0d0d12;
+  transition: transform 0.3s ease;
+}
+
+.bike-card:hover .bike-card-img {
+  transform: scale(1.05);
+}
+
+.bike-demo-badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background-color: var(--color-warning);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: var(--shadow-sm);
+}
+
+.bike-card-body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-2);
+}
+
+.bike-card-category {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-red);
+}
+
+.bike-card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+.bike-card-spec {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-2);
+}
+
+.bike-card-price-row {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-gray-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.bike-card-price-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.bike-card-price {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-black);
+}
+
+.bike-card-actions {
+  margin-top: var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.bike-card-actions .btn {
+  flex: 1;
+  text-align: center;
+  font-size: var(--font-size-sm, 0.875rem);
+  padding: 8px 12px;
+}
+
+.bike-card-btn-cart {
+  flex: 1;
+  background-color: #cc0000;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md, 6px);
+  font-weight: 600;
+  font-size: var(--font-size-sm, 0.875rem);
+  padding: 8px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.15s ease;
+}
+
+.bike-card-btn-cart:hover {
+  background-color: #b30000;
+}
+
+.bike-card-btn-cart.added {
+  background-color: #2e7d32;
+}

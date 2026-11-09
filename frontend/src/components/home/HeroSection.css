@@ -1,0 +1,120 @@
+.hero-section-home {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: var(--space-12) 0 var(--space-16);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--color-red);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-12);
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  align-self: flex-start;
+  padding: var(--space-1) var(--space-3);
+  background-color: rgba(215, 25, 32, 0.15);
+  border: 1px solid var(--color-red);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-red);
+  border-radius: var(--radius-full);
+}
+
+.hero-heading {
+  font-size: clamp(2.25rem, 6vw, var(--font-size-5xl));
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.hero-heading-accent {
+  color: var(--color-red);
+}
+
+.hero-subheading {
+  font-size: clamp(1rem, 2.5vw, var(--font-size-lg));
+  color: var(--color-gray-300);
+  line-height: var(--line-height-relaxed);
+  max-width: 580px;
+  margin: 0;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.hero-cta-primary {
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--font-size-base);
+}
+
+.hero-cta-secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-gray-600);
+}
+
+.hero-cta-secondary:hover {
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-400);
+}
+
+.hero-visual-card {
+  background-color: var(--color-gray-900);
+  border: 1px solid var(--color-gray-800);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.hero-visual-placeholder {
+  border: 1px solid var(--color-gray-700);
+}
+
+.hero-visual-note {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  text-align: center;
+  margin: 0;
+}

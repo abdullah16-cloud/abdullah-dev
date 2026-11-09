@@ -1,0 +1,113 @@
+.account-layout-wrap {
+  padding: var(--space-8) 0 var(--space-16);
+  background-color: var(--color-bg);
+  min-height: calc(100vh - 200px);
+}
+
+.account-preview-banner {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+  border: 1px solid var(--color-warning);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .account-grid {
+    grid-template-columns: 260px 1fr;
+  }
+}
+
+.account-nav {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+}
+
+.account-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: var(--space-2);
+}
+
+@media (min-width: 1024px) {
+  .account-nav-list {
+    flex-direction: column;
+  }
+}
+
+.account-nav-link {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.account-nav-link:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-black);
+}
+
+.account-nav-link[aria-current='page'] {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+}
+
+.account-nav-link:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+.account-logout-btn {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-error);
+}
+
+.account-logout-btn:hover {
+  background-color: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.account-content-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.account-page-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin-top: 0;
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-gray-200);
+  padding-bottom: var(--space-3);
+}

@@ -1,0 +1,131 @@
+.recent-orders-card {
+  background-color: #141419;
+  border: 1px solid #1f1f27;
+  border-radius: var(--radius-lg, 8px);
+  padding: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.recent-orders-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.recent-orders-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.recent-orders-view-all {
+  font-size: 0.85rem;
+  color: var(--color-honda-red, #cc0000);
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.recent-orders-view-all:hover {
+  text-decoration: underline;
+}
+
+.orders-table-wrapper {
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.orders-table th {
+  padding: var(--space-3) var(--space-4);
+  background-color: #0d0d11;
+  color: #8f8f9d;
+  font-weight: 600;
+  border-bottom: 1px solid #23232c;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.orders-table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid #1a1a22;
+  color: #d1d1db;
+  vertical-align: middle;
+}
+
+.orders-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.order-num-cell {
+  font-family: monospace;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.customer-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.customer-city {
+  font-size: 0.775rem;
+  color: #7b7b8a;
+}
+
+.order-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-pending {
+  background-color: rgba(255, 152, 0, 0.15);
+  color: #ffb74d;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.badge-confirmed {
+  background-color: rgba(33, 150, 243, 0.15);
+  color: #64b5f6;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.badge-dispatched {
+  background-color: rgba(156, 39, 176, 0.15);
+  color: #ba68c8;
+  border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+.badge-delivered {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #81c784;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.badge-cancelled {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: #e57373;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.recent-orders-empty {
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  color: #7b7b8a;
+}

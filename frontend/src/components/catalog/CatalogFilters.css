@@ -1,0 +1,93 @@
+.catalog-filters-wrap {
+  margin-bottom: var(--space-8);
+}
+
+/* Mobile Toggle Button */
+.catalog-mobile-filter-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  cursor: pointer;
+  margin-bottom: var(--space-4);
+}
+
+.catalog-mobile-filter-toggle:focus-visible {
+  outline: 2px solid var(--color-red);
+}
+
+.catalog-filter-toggle-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-fast);
+}
+
+.catalog-mobile-filter-toggle[aria-expanded='true'] .catalog-filter-toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Panel Layout */
+.catalog-filters-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background-color: var(--color-white);
+  padding: var(--space-5);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* On mobile, collapse panel if not open */
+@media (max-width: 1023px) {
+  .catalog-filters-panel:not(.open) {
+    display: none;
+  }
+}
+
+/* On desktop (>= 1024px), always show */
+@media (min-width: 1024px) {
+  .catalog-mobile-filter-toggle {
+    display: none;
+  }
+
+  .catalog-filters-panel {
+    display: grid;
+    grid-template-columns: 2fr 2.5fr 1.5fr 1.5fr auto;
+    align-items: flex-end;
+    gap: var(--space-4);
+  }
+}
+
+.catalog-clear-btn {
+  align-self: flex-end;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-red);
+  background-color: transparent;
+  border: 1px solid var(--color-red);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.catalog-clear-btn:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.catalog-clear-btn:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}

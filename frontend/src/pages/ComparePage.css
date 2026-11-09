@@ -1,0 +1,208 @@
+.compare-page {
+  padding: var(--space-8) 0 var(--space-16);
+}
+
+.compare-header {
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.compare-tag {
+  display: inline-block;
+  color: var(--color-honda-red, #cc0000);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-2);
+}
+
+.compare-title {
+  font-size: var(--text-3xl, 2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: var(--space-3);
+}
+
+.compare-subtitle {
+  font-size: var(--text-base, 1rem);
+  color: #a0a0ab;
+  max-width: 680px;
+  margin: 0 auto var(--space-6);
+  line-height: 1.6;
+}
+
+.compare-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #141419;
+  border: 1px solid #23232c;
+  border-radius: var(--radius-lg, 8px);
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.compare-selector-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.compare-select {
+  background-color: #0d0d11;
+  border: 1px solid #2e2e3a;
+  color: #ffffff;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md, 6px);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.compare-select:focus {
+  border-color: var(--color-honda-red, #cc0000);
+}
+
+.compare-clear-btn {
+  background: transparent;
+  border: 1px solid #2e2e3a;
+  color: #a0a0ab;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md, 6px);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.compare-clear-btn:hover {
+  color: #ff5252;
+  border-color: #ff5252;
+  background-color: rgba(255, 82, 82, 0.1);
+}
+
+/* Comparison Table */
+.compare-table-container {
+  overflow-x: auto;
+  background-color: #141419;
+  border: 1px solid #23232c;
+  border-radius: var(--radius-lg, 8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid #1f1f27;
+  border-right: 1px solid #1f1f27;
+  vertical-align: top;
+}
+
+.compare-table th:last-child,
+.compare-table td:last-child {
+  border-right: none;
+}
+
+.compare-spec-label {
+  width: 200px;
+  min-width: 180px;
+  background-color: #0f0f13;
+  color: #a0a0ab;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.compare-bike-col {
+  min-width: 220px;
+  background-color: #141419;
+}
+
+.compare-card-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  position: relative;
+}
+
+.compare-remove-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #7b7b8a;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.compare-remove-btn:hover {
+  color: #ff5252;
+}
+
+.compare-bike-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: var(--space-2);
+}
+
+.compare-category-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: rgba(204, 0, 0, 0.15);
+  color: #ff4d4d;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.compare-val {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.compare-price-val {
+  color: var(--color-honda-red, #cc0000);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.compare-muted {
+  color: #7b7b8a;
+  font-size: 0.85rem;
+}
+
+.compare-empty-box {
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  background-color: #141419;
+  border: 1px dashed #2e2e3a;
+  border-radius: var(--radius-lg, 8px);
+}
+
+.compare-empty-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.compare-empty-desc {
+  color: #8f8f9d;
+  max-width: 500px;
+  margin: 0 auto var(--space-6);
+}
+

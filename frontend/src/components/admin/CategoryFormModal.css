@@ -1,0 +1,112 @@
+.category-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 1.5rem;
+}
+
+.category-modal-dialog {
+  background-color: #16161b;
+  border: 1px solid #282833;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  animation: categoryModalIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+@keyframes categoryModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.category-modal-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #23232d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-modal-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.category-modal-close-btn {
+  background: transparent;
+  border: none;
+  color: #999999;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+}
+
+.category-modal-close-btn:hover {
+  color: #ffffff;
+}
+
+.category-modal-form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.category-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background-color: #111115;
+  border-top: 1px solid #23232d;
+}
+
+.category-form-textarea {
+  width: 100%;
+  min-height: 90px;
+  background-color: #0d0d11;
+  border: 1px solid #282833;
+  color: #ffffff;
+  padding: 0.6rem 0.85rem;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.category-form-textarea:focus {
+  border-color: #cc0000;
+}
+
+.category-error-alert {
+  padding: 0.75rem 1rem;
+  background-color: rgba(229, 57, 53, 0.15);
+  border: 1px solid #e53935;
+  border-radius: 6px;
+  color: #ff8a80;
+  font-size: 0.85rem;
+}
+

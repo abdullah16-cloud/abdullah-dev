@@ -1,0 +1,58 @@
+.admin-categories-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6, 1.5rem);
+}
+
+.category-name-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.category-title-text {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.category-slug-text {
+  font-size: 0.75rem;
+  color: #7b7b8a;
+  font-family: monospace;
+}
+
+.category-badge-tag {
+  display: inline-block;
+  background-color: rgba(204, 0, 0, 0.15);
+  color: #ff6b6b;
+  border: 1px solid rgba(204, 0, 0, 0.35);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.category-count-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #1f1f28;
+  color: #d1d1db;
+  border: 1px solid #2f2f3d;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.category-desc-preview {
+  font-size: 0.8rem;
+  color: #8f8f9d;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

@@ -1,0 +1,49 @@
+.empty-state {
+  text-align: center;
+  padding: var(--space-12) var(--space-4);
+  background-color: var(--color-white);
+  border: 1px dashed var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  max-width: 600px;
+  margin: var(--space-8) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.empty-state-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-gray-400);
+}
+
+.empty-state-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin: 0;
+}
+
+.empty-state-message {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin: 0;
+  max-width: 450px;
+}
+
+.empty-state-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  margin: var(--space-2) 0;
+}
+
+.empty-filter-pill {
+  font-size: var(--font-size-xs);
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-800);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+}

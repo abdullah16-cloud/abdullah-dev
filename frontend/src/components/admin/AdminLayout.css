@@ -1,0 +1,40 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0c0c0f;
+  color: #e5e5eb;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.admin-main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.admin-content-area {
+  flex: 1;
+  padding: var(--space-6);
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.admin-backdrop {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .admin-backdrop.active {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 95;
+  }
+
+  .admin-content-area {
+    padding: var(--space-4);
+  }
+}

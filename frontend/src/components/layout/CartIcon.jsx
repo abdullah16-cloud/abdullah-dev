@@ -4,10 +4,22 @@ import { useCart } from '../../context/CartContext';
 import './CartIcon.css';
 
 function CartIcon() {
-  const { cartCount } = useCart();
+  const { cartCount, openDrawer } = useCart();
+
+  const handleClick = (e) => {
+    if (openDrawer) {
+      e.preventDefault();
+      openDrawer();
+    }
+  };
 
   return (
-    <Link to="/cart" className="cart-link" aria-label={`Cart, ${cartCount} items`}>
+    <Link
+      to="/cart"
+      onClick={handleClick}
+      className="cart-link"
+      aria-label={`Cart, ${cartCount} items`}
+    >
       <svg
         className="cart-svg"
         viewBox="0 0 24 24"

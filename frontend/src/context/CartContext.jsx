@@ -14,7 +14,12 @@ export function CartProvider({ children }) {
     }
   });
 
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const isInitialMount = useRef(true);
+
+  const openDrawer = () => setIsDrawerOpen(true);
+  const closeDrawer = () => setIsDrawerOpen(false);
+  const toggleDrawer = () => setIsDrawerOpen((prev) => !prev);
 
   // Persist cart to localStorage only when modified
   useEffect(() => {
@@ -29,7 +34,7 @@ export function CartProvider({ children }) {
     }
   }, [items]);
 
-  const addToCart = (bike, quantity = 1, selectedColor = null) => {
+  const addToCart = (bike, quantity = 1, selectedColor = null, showDrawer = true) => {
     if (!bike) return;
     const bikeId = bike.id || bike.slug || bike.internalId;
 
@@ -62,6 +67,10 @@ export function CartProvider({ children }) {
 
       return [...prevItems, newItem];
     });
+
+    if (showDrawer) {
+      setIsDrawerOpen(true);
+    }
   };
 
   const removeFromCart = (bikeId) => {
@@ -109,6 +118,10 @@ export function CartProvider({ children }) {
     updateQuantity,
     clearCart,
     isInCart,
+    isDrawerOpen,
+    openDrawer,
+    closeDrawer,
+    toggleDrawer,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
@@ -126,6 +139,10 @@ export function useCart() {
       updateQuantity: () => {},
       clearCart: () => {},
       isInCart: () => false,
+      isDrawerOpen: false,
+      openDrawer: () => {},
+      closeDrawer: () => {},
+      toggleDrawer: () => {},
     };
   }
   return context;

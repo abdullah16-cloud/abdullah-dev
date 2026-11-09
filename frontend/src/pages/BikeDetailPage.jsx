@@ -297,3 +297,4 @@ function BikeDetailPage() {
 }
 
 export default BikeDetailPage;
+

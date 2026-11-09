@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
+import CartDrawer from '../cart/CartDrawer';
 import './Layout.css';
 
 function Layout() {
@@ -21,6 +22,7 @@ function Layout() {
       </main>
 
       <Footer />
+      <CartDrawer />
     </div>
   );
 }

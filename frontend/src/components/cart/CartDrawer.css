@@ -1,0 +1,365 @@
+/* Cart Drawer Overlay & Slide-over Styles */
+.cart-drawer-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+}
+
+.cart-drawer-wrapper.open {
+  visibility: visible;
+}
+
+/* Semi-transparent Backdrop */
+.cart-drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  backdrop-filter: blur(2px);
+  transition: opacity 0.3s ease;
+}
+
+.cart-drawer-wrapper.open .cart-drawer-backdrop {
+  opacity: 1;
+}
+
+/* Slide-over Right Panel */
+.cart-drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 440px;
+  max-width: 90vw;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.25);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #111111;
+  z-index: 10000;
+}
+
+.cart-drawer-wrapper.open .cart-drawer-panel {
+  transform: translateX(0);
+}
+
+/* Header */
+.cart-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #eeeeee;
+  background: #ffffff;
+}
+
+.drawer-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.drawer-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111111;
+  margin: 0;
+}
+
+.drawer-count-badge {
+  background: #fff0f0;
+  color: #cc0000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.drawer-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #666666;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.drawer-close-btn:hover {
+  background: #f5f5f5;
+  color: #111111;
+}
+
+/* Body */
+.cart-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+  background: #fafafc;
+}
+
+/* Empty State */
+.drawer-empty-state {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.drawer-empty-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.drawer-empty-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.5rem;
+}
+
+.drawer-empty-desc {
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.drawer-empty-btn {
+  width: 100%;
+  max-width: 240px;
+  padding: 10px 20px;
+  background: #cc0000;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Item Card */
+.drawer-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.drawer-item-card {
+  background: #ffffff;
+  border: 1px solid #e8e8ee;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.drawer-item-thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  background-color: #111;
+  flex-shrink: 0;
+}
+
+.drawer-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.drawer-item-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.drawer-item-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.drawer-item-remove {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: #999999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+  transition: color 0.15s ease;
+}
+
+.drawer-item-remove:hover {
+  color: #cc0000;
+}
+
+.drawer-item-meta {
+  font-size: 0.775rem;
+  color: #666666;
+}
+
+.drawer-item-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.drawer-item-unit-price {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #cc0000;
+}
+
+.drawer-qty-wrap {
+  display: flex;
+  align-items: center;
+  background: #f3f3f5;
+  border: 1px solid #dcdce0;
+  border-radius: 4px;
+  padding: 2px 4px;
+  gap: 6px;
+}
+
+.drawer-qty-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawer-qty-val {
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-width: 14px;
+  text-align: center;
+}
+
+.drawer-item-subtotal-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666666;
+  border-top: 1px dashed #eeeeee;
+  padding-top: 6px;
+  margin-top: 4px;
+}
+
+.drawer-item-subtotal-row strong {
+  color: #111111;
+}
+
+/* Footer */
+.cart-drawer-footer {
+  border-top: 1px solid #eeeeee;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drawer-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #555555;
+}
+
+.drawer-free-tag {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.drawer-summary-row.total-row {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.drawer-total-val {
+  color: #cc0000;
+  font-size: 1.25rem;
+}
+
+.drawer-cod-note {
+  font-size: 0.775rem;
+  color: #555555;
+  background: #f7f9fa;
+  border-left: 3px solid #cc0000;
+  padding: 6px 10px;
+  margin: 0;
+  border-radius: 2px;
+}
+
+.drawer-checkout-btn {
+  width: 100%;
+  padding: 12px 18px;
+  background: #cc0000;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  text-align: center;
+}
+
+.drawer-checkout-btn:hover {
+  background: #b30000;
+}
+
+.drawer-footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.drawer-continue-btn {
+  background: transparent;
+  border: none;
+  color: #666666;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.drawer-continue-btn:hover {
+  color: #111111;
+}
+
+.drawer-clear-btn {
+  background: transparent;
+  border: none;
+  color: #999999;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.drawer-clear-btn:hover {
+  color: #cc0000;
+}
